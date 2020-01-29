@@ -19,23 +19,32 @@ var textRecognizer: VisionTextRecognizer!
 func runTextRecognition(with image: UIImage) {
      let visionImage = VisionImage(image: image)
      textRecognizer.process(visionImage){ (features, error) in
-        processResult(from: features, error: error) {
-            
+            processResult(from: features, error: error) {
         }
      }
  }
 
 func processResult(from text: VisionText?, error: Error?, completionHandler: ()->()) {
-    guard let features = text else { return }
+    if let error = error {
+        print(error.localizedDescription)
+    }
     
+    guard let features = text else {
+        print("Unable to scan text.")
+        return
+    }
+
     var contentText = ""
     for block in features.blocks{
-     for line in block.lines{
-         for element in line.elements{
-            contentText.append(contentsOf: element.text + " ")
-         }
-     }
+        for line in block.lines{
+            for element in line.elements{
+                contentText.append(contentsOf: element.text + " ")
+            }
+        }
+        contentText.append(contentsOf: "\n")
     }
+    
+    print(contentText)
     
     let newPage = PageContent(title: "New Note", content: contentText)
     items.insert(newPage, at: 0)
