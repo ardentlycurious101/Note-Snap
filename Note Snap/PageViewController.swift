@@ -20,10 +20,13 @@ struct PageContent {
 
 class PageViewController: UIViewController {
 
-    private lazy var pageTitle: UILabel = {
-        let title = UILabel()
+    private lazy var pageTitle: UITextView = {
+        let title = UITextView()
         title.text = ""
         title.translatesAutoresizingMaskIntoConstraints = false
+        title.font = UIFont.boldSystemFont(ofSize: 20)
+        title.isScrollEnabled = false
+        title.sizeToFit()
         
         return title
     }()
@@ -32,6 +35,7 @@ class PageViewController: UIViewController {
         let pageTextView = UITextView()
         pageTextView.translatesAutoresizingMaskIntoConstraints = false
         pageTextView.text = ""
+        pageTextView.font = UIFont.systemFont(ofSize: 14)
         
         return pageTextView
     }()
@@ -61,10 +65,10 @@ extension PageViewController {
         let layoutMargins = self.view.layoutMarginsGuide
         
         NSLayoutConstraint.activate([
-            self.pageTitle.topAnchor.constraint(equalTo: layoutMargins.topAnchor),
+            self.pageTitle.topAnchor.constraint(equalTo: layoutMargins.topAnchor, constant: 20),
             self.pageTitle.leadingAnchor.constraint(equalTo: layoutMargins.leadingAnchor),
             self.pageTitle.trailingAnchor.constraint(equalTo: layoutMargins.trailingAnchor),
-            self.pageTitle.heightAnchor.constraint(equalTo: layoutMargins.heightAnchor, multiplier: 1/8),
+//            self.pageTitle.heightAnchor.constraint(equalTo: layoutMargins.heightAnchor, multiplier: 1/8),
             
             self.pageTextView.topAnchor.constraint(equalTo: self.pageTitle.bottomAnchor),
             self.pageTextView.leadingAnchor.constraint(equalTo: layoutMargins.leadingAnchor),
