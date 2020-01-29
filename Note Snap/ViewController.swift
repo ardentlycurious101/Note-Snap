@@ -66,10 +66,6 @@ extension ViewController {
         photoLibraryView.addGestureRecognizer(photoLibraryTap)
     }
     
-    @objc func journalTapped(_ sender: UITapGestureRecognizer) {
-        self.present(JournalViewController(), animated: true, completion: nil)
-    }
-    
     func addSubviews() {
         self.view.addSubview(journalView)
         self.view.addSubview(cameraView)
@@ -100,6 +96,10 @@ extension ViewController {
 }
 
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    @objc func journalTapped(_ sender: UITapGestureRecognizer) {
+        self.present(AllNotesTableViewController(), animated: true)
+    }
     
     @objc func cameraTapped(_ sender: UITapGestureRecognizer) {
         print("camera tapped")

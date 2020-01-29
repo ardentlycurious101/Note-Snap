@@ -14,10 +14,10 @@
 		EA9C8D0323DFD9CA007A5546 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA9C8D0223DFD9CA007A5546 /* Assets.xcassets */; };
 		EA9C8D0623DFD9CA007A5546 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA9C8D0423DFD9CA007A5546 /* LaunchScreen.storyboard */; };
 		EA9C8D0E23DFD9F9007A5546 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9C8D0D23DFD9F9007A5546 /* PageViewController.swift */; };
-		EA9C8D1023DFDA16007A5546 /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9C8D0F23DFDA16007A5546 /* JournalViewController.swift */; };
 		EA9C8D1223DFDA32007A5546 /* VisionFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9C8D1123DFDA32007A5546 /* VisionFunctions.swift */; };
 		EA9C8D1423DFDA45007A5546 /* ProcessImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9C8D1323DFDA45007A5546 /* ProcessImageViewController.swift */; };
 		EA9C8D1723DFDD39007A5546 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA9C8D1623DFDD39007A5546 /* GoogleService-Info.plist */; };
+		EAE2EA9623E1555D00EB1234 /* AllNotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE2EA9523E1555D00EB1234 /* AllNotesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,10 +32,10 @@
 		EA9C8D0523DFD9CA007A5546 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA9C8D0723DFD9CA007A5546 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA9C8D0D23DFD9F9007A5546 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
-		EA9C8D0F23DFDA16007A5546 /* JournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
 		EA9C8D1123DFDA32007A5546 /* VisionFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionFunctions.swift; sourceTree = "<group>"; };
 		EA9C8D1323DFDA45007A5546 /* ProcessImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessImageViewController.swift; sourceTree = "<group>"; };
 		EA9C8D1623DFDD39007A5546 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EAE2EA9523E1555D00EB1234 /* AllNotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNotesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +91,7 @@
 				EA9C8CF923DFD9C7007A5546 /* AppDelegate.swift */,
 				EA9C8CFB23DFD9C7007A5546 /* SceneDelegate.swift */,
 				EA9C8CFD23DFD9C7007A5546 /* ViewController.swift */,
-				EA9C8D0F23DFDA16007A5546 /* JournalViewController.swift */,
+				EAE2EA9523E1555D00EB1234 /* AllNotesTableViewController.swift */,
 				EA9C8D0D23DFD9F9007A5546 /* PageViewController.swift */,
 				EA9C8D1123DFDA32007A5546 /* VisionFunctions.swift */,
 				EA9C8D1323DFDA45007A5546 /* ProcessImageViewController.swift */,
@@ -242,7 +242,7 @@
 				EA9C8D1423DFDA45007A5546 /* ProcessImageViewController.swift in Sources */,
 				EA9C8D1223DFDA32007A5546 /* VisionFunctions.swift in Sources */,
 				EA9C8D0E23DFD9F9007A5546 /* PageViewController.swift in Sources */,
-				EA9C8D1023DFDA16007A5546 /* JournalViewController.swift in Sources */,
+				EAE2EA9623E1555D00EB1234 /* AllNotesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
