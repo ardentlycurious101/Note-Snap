@@ -68,7 +68,6 @@ extension PageViewController {
             self.pageTitle.topAnchor.constraint(equalTo: layoutMargins.topAnchor, constant: 20),
             self.pageTitle.leadingAnchor.constraint(equalTo: layoutMargins.leadingAnchor),
             self.pageTitle.trailingAnchor.constraint(equalTo: layoutMargins.trailingAnchor),
-//            self.pageTitle.heightAnchor.constraint(equalTo: layoutMargins.heightAnchor, multiplier: 1/8),
             
             self.pageTextView.topAnchor.constraint(equalTo: self.pageTitle.bottomAnchor),
             self.pageTextView.leadingAnchor.constraint(equalTo: layoutMargins.leadingAnchor),
