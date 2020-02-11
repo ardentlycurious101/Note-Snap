@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		51A22CF07C20918032C10441 /* Pods_Note_Snap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D651853F6B8B5E3CB0ACC7B6 /* Pods_Note_Snap.framework */; };
+		EA9B70CD23F22FD1002E4F66 /* Note.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA9B70CB23F22FD1002E4F66 /* Note.xcdatamodeld */; };
 		EA9C8CFA23DFD9C7007A5546 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9C8CF923DFD9C7007A5546 /* AppDelegate.swift */; };
 		EA9C8CFC23DFD9C7007A5546 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9C8CFB23DFD9C7007A5546 /* SceneDelegate.swift */; };
 		EA9C8CFE23DFD9C7007A5546 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9C8CFD23DFD9C7007A5546 /* ViewController.swift */; };
@@ -18,12 +19,14 @@
 		EA9C8D1423DFDA45007A5546 /* ProcessImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9C8D1323DFDA45007A5546 /* ProcessImageViewController.swift */; };
 		EA9C8D1723DFDD39007A5546 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA9C8D1623DFDD39007A5546 /* GoogleService-Info.plist */; };
 		EAE2EA9623E1555D00EB1234 /* AllNotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE2EA9523E1555D00EB1234 /* AllNotesTableViewController.swift */; };
+		EAE2EA9B23E1787300EB1234 /* PersistentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE2EA9A23E1787300EB1234 /* PersistentManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5823145ECA7AE3B7893B65C2 /* Pods-Note Snap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Note Snap.debug.xcconfig"; path = "Target Support Files/Pods-Note Snap/Pods-Note Snap.debug.xcconfig"; sourceTree = "<group>"; };
 		D651853F6B8B5E3CB0ACC7B6 /* Pods_Note_Snap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Note_Snap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB1D2E25951D0E6895501ADE /* Pods-Note Snap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Note Snap.release.xcconfig"; path = "Target Support Files/Pods-Note Snap/Pods-Note Snap.release.xcconfig"; sourceTree = "<group>"; };
+		EA9B70CC23F22FD1002E4F66 /* Note.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Note.xcdatamodel; sourceTree = "<group>"; };
 		EA9C8CF623DFD9C7007A5546 /* Note Snap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Note Snap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA9C8CF923DFD9C7007A5546 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA9C8CFB23DFD9C7007A5546 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +39,7 @@
 		EA9C8D1323DFDA45007A5546 /* ProcessImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessImageViewController.swift; sourceTree = "<group>"; };
 		EA9C8D1623DFDD39007A5546 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EAE2EA9523E1555D00EB1234 /* AllNotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNotesTableViewController.swift; sourceTree = "<group>"; };
+		EAE2EA9A23E1787300EB1234 /* PersistentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 		EA9C8CF823DFD9C7007A5546 /* Note Snap */ = {
 			isa = PBXGroup;
 			children = (
+				EAE2EA9923E1785900EB1234 /* Core Data */,
 				EA9C8CF923DFD9C7007A5546 /* AppDelegate.swift */,
 				EA9C8CFB23DFD9C7007A5546 /* SceneDelegate.swift */,
 				EA9C8CFD23DFD9C7007A5546 /* ViewController.swift */,
@@ -101,6 +106,15 @@
 				EA9C8D1623DFDD39007A5546 /* GoogleService-Info.plist */,
 			);
 			path = "Note Snap";
+			sourceTree = "<group>";
+		};
+		EAE2EA9923E1785900EB1234 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				EAE2EA9A23E1787300EB1234 /* PersistentManager.swift */,
+				EA9B70CB23F22FD1002E4F66 /* Note.xcdatamodeld */,
+			);
+			path = "Core Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,11 +251,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA9C8CFE23DFD9C7007A5546 /* ViewController.swift in Sources */,
+				EA9B70CD23F22FD1002E4F66 /* Note.xcdatamodeld in Sources */,
 				EA9C8CFA23DFD9C7007A5546 /* AppDelegate.swift in Sources */,
 				EA9C8CFC23DFD9C7007A5546 /* SceneDelegate.swift in Sources */,
 				EA9C8D1423DFDA45007A5546 /* ProcessImageViewController.swift in Sources */,
 				EA9C8D1223DFDA32007A5546 /* VisionFunctions.swift in Sources */,
 				EA9C8D0E23DFD9F9007A5546 /* PageViewController.swift in Sources */,
+				EAE2EA9B23E1787300EB1234 /* PersistentManager.swift in Sources */,
 				EAE2EA9623E1555D00EB1234 /* AllNotesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,6 +450,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EA9B70CB23F22FD1002E4F66 /* Note.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EA9B70CC23F22FD1002E4F66 /* Note.xcdatamodel */,
+			);
+			currentVersion = EA9B70CC23F22FD1002E4F66 /* Note.xcdatamodel */;
+			path = Note.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EA9C8CEE23DFD9C7007A5546 /* Project object */;
 }

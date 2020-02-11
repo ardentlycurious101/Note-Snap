@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  NoteSnap
 //
-//  Created by Elina Lua Ming and Jacob Nguyen on 1/26/20.
+//  Created by Elina Lua Ming on 1/26/20.
 //  Copyright © 2020 Elina Lua Ming. All rights reserved.
 //
 

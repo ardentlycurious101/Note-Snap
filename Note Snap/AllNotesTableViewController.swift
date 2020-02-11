@@ -5,8 +5,10 @@
 //  Created by Elina Lua Ming on 1/28/20.
 //  Copyright © 2020 Elina Lua Ming. All rights reserved.
 //
+//  Description:- Searchable table with all notes in app.
 
 import UIKit
+import CoreData
 
 class AllNotesTableViewController: UITableViewController {
 

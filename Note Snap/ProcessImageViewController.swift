@@ -2,9 +2,10 @@
 //  ProcessImageViewController.swift
 //  NoteSnap
 //
-//  Created by Elina Lua Ming and Jacob Nguyen on 1/26/20.
+//  Created by Elina Lua Ming on 1/26/20.
 //  Copyright © 2020 Elina Lua Ming. All rights reserved.
 //
+//  Description:- VC that shows image selected, and allows user to click "Process" to process image with Vision.
 
 import UIKit
 import FirebaseMLVision
@@ -74,7 +75,7 @@ extension ProcessImageViewController: UINavigationControllerDelegate {
             let imageView = UIImageView(image: self.image)
             
             let vision = Vision.vision()
-            textRecognizer = vision.onDeviceTextRecognizer()
+            documentTextRecognizer = vision.cloudDocumentTextRecognizer()
             runTextRecognition(with: (imageView.image!))
         }
         
